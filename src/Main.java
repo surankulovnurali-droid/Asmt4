@@ -25,6 +25,22 @@ public class Main {
         System.out.println("\nSorted by price");
         gallery.sortByPrice();
         gallery.showAllArtworks();
+
+        ArtistDAO artistDAO = new ArtistDAO();
+        ArtworkDAO artworkDAO = new ArtworkDAO();
+
+        artistDAO.addArtist("Leonardo da Vinci");
+
+        artistDAO.getArtists();
+
+        artistDAO.updateArtist(1, "L. da Vinci");
+
+        artworkDAO.addArtwork(
+                "Mona Lisa", 1503, 800000,
+                "Painting", 1
+        );
+
+        artworkDAO.showArtworks();
     }
 }
 

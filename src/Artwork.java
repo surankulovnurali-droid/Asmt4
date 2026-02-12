@@ -5,11 +5,16 @@ public abstract class Artwork {
     private String title;
     private int year;
     private double price;
+    private int id;
 
     public Artwork(String title, int year, double price) {
         this.title = title;
         this.year = year;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getTitle() {

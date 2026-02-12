@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.util.List;
 
 public class ArtworkDAO {
 
@@ -25,7 +26,7 @@ public class ArtworkDAO {
         }
     }
 
-    public void showArtworks() {
+    public List<Artwork> showArtworks() {
         String sql = "SELECT * FROM artwork";
 
         try (Connection conn = DatabaseConnection.getConnection();
@@ -44,5 +45,6 @@ public class ArtworkDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 }
